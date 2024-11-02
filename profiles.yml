@@ -1,0 +1,13 @@
+ecommerce_dbt:
+  outputs:
+    dev:
+      account: ww61112.ca-central-1.aws
+      database: TESTDB
+      password: YourPassword
+      role: dbt3
+      schema: ECOMMERCE
+      threads: 1
+      type: snowflake
+      user: dbt_user3
+      warehouse: SMALLWAREHOUSE
+  target: dev
