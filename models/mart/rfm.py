@@ -18,6 +18,4 @@ def model(dbt, session):
     # In the last part of the code, we merge two datasets to identify the best customer based on their spending habits
     df_final = df_invoice.join(df_item, df_invoice.CUSTOMERID == df_item.CUSTOMERID, join_type="left").drop(df_invoice.CUSTOMERID).with_column_renamed(df_item.CUSTOMERID, "CUSTOMERID")
 
-
-    # returning the final output that will go into the table
     return df_final
