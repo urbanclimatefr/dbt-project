@@ -12,6 +12,6 @@ models:
     columns:
       - name: INVOICENO
         tests:
-          #- unique
+          - unique
           - not_null
           - base_invoice_match
